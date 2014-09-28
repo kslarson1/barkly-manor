@@ -1,0 +1,47 @@
+
+
+<?php
+/**
+ *
+ * Template Name: About
+ *
+ *
+ * @package Dogboarding
+ */
+
+get_header(); ?>
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+			<?php while ( have_posts() ) : the_post(); ?>
+
+			<!-- BEGIN ABOUT TOP SECTION -->
+			<div class="row">
+			<!-- BEGIN TEXT AREA -->
+			<div class="column one-half">
+				<?php the_field('about-text'); ?>
+			</div>
+			<!-- END OF TEXT AREA -->
+			<!-- BEGIN ABOUT IMAGE -->
+			<div class="column one-half rectangle-rounded">
+				<?php the_field('about-image'); ?>
+			</div>
+			<!-- END OF ABOUT IMAGE -->
+			</div>
+			<!-- END OF ABOUT TOP SECTION -->
+
+			<!-- BEGIN BUTTON SECTION -->
+			<div class="row">
+				<!-- *********INSERT BUTTONS HERE FAQ, BOOK NOW, POLICIES***** -->
+			</div>
+			<!-- END OF BUTTON SECTION -->
+
+				<?php get_template_part( 'content', 'page' ); ?>
+
+			<?php endwhile; // end of the loop. ?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php get_footer(); ?>
