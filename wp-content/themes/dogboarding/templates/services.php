@@ -17,53 +17,37 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<div class="row">
-			<!-- INSERT COLUMN 1 IMAGE HERE -->
+
+			<!-- // The Arguments -->
+			<?php $args = array( 
+			    'post_type' => 'barkly_services', 
+			    'posts_per_page' => 3
+			    );
+
+			// <!-- START LOOP -->
+			$loop = new WP_Query( $args );
+			while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+			<!-- LOOP CONTENT BEGINS-->
+			<!-- IMAGE HERE -->
 			<div class="column one-third circle">
-				<?php the_field('services-column-1-image'); ?>
+				<img src="<?php the_field('services-column-image'); ?>" alt="">
 			</div>
-			<!-- END COLUMN 1 IMAGE -->
+			<!-- END IMAGE -->
 
-			<!-- INSERT COLUMN 1 TEXT HERE -->
+			<!-- INSERT HEADER AND TEXT HERE -->
 			<div class="column two-thirds">
-				<?php the_field('services-column-1-header'); ?>
-				<?php the_field('services-column-1-text'); ?>
+				<h2><?php the_field('services-column-header'); ?></h2>
+				<p><?php the_field('services-column-text'); ?></p>
 			</div>
-			<!-- END COLUMN 1 TEXT -->
-			</div>
-
-			<div class="row">
-			<!-- INSERT COLUMN 2 TEXT HERE -->
-			<div class="column two-thirds">
-				<?php the_field('services-column-2-header'); ?>
-				<?php the_field('services-column-2-text'); ?>
-			</div>
-			<!-- END COLUMN 2 TEXT -->
-
-			<!-- INSERT COLUMN 2 IMAGE HERE -->
-			<div class="column one-third circle">
-				<?php the_field('services-column-2-image'); ?>
-			</div>
-			<!-- END COLUMN 2 IMAGE -->
-			</div>
-
-			<div class="row">
-			<!-- INSERT COLUMN 3 IMAGE HERE -->
-			<div class="column one-third circle">
-				<?php the_field('services-column-3-image'); ?>
-			</div>
-			<!-- END COLUMN 3 IMAGE -->
-
-			<!-- INSERT COLUMN 3 TEXT HERE -->
-			<div class="column two-thirds">
-				<?php the_field('services-column-3-header'); ?>
-				<?php the_field('services-column-3-text'); ?>
-			</div>
-			<!-- END COLUMN 3 TEXT -->
+			<!-- END HEADER AND TEXT -->
+			<?php endwhile; ?>
 			</div>
 
 				<?php get_template_part( 'content', 'page' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
+			<?php wp_reset_postdata(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

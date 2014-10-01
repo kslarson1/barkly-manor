@@ -128,3 +128,19 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// WE ADDED THE ADD ACTION BELOW IN CLASS //
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+    register_post_type( 'barkly_services',
+        array(
+            'labels' => array(
+                'name' => __( 'Services' ),
+                'singular_name' => __( 'Service' )
+            ),
+            'taxonomies' => array('category'),
+            'public' => true,
+            'has_archive' => true,
+        )
+    );
+}

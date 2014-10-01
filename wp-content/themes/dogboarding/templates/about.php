@@ -20,12 +20,12 @@ get_header(); ?>
 			<div class="row">
 			<!-- BEGIN TEXT AREA -->
 			<div class="column one-half">
-				<?php the_field('about-text'); ?>
+				<p><?php the_field('about-text'); ?></p>
 			</div>
 			<!-- END OF TEXT AREA -->
 			<!-- BEGIN ABOUT IMAGE -->
 			<div class="column one-half rectangle-rounded">
-				<?php the_field('about-image'); ?>
+				<img src="<?php the_field('about-image'); ?>" alt="">
 			</div>
 			<!-- END OF ABOUT IMAGE -->
 			</div>
