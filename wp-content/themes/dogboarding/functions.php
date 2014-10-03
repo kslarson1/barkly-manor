@@ -43,7 +43,9 @@ function dogboarding_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'dogboarding' ),
-	) );
+		'footer' => __( 'Footer Menu', 'dogboarding' ),  // Footer menu
+    	'social' => __( 'Social Menu', 'dogboarding' ),   // If you want to use a social menu
+		) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -94,6 +96,8 @@ add_action( 'widgets_init', 'dogboarding_widgets_init' );
 function dogboarding_scripts() {
 	wp_enqueue_style( 'dogboarding-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'dogboarding-genericons', get_template_directory_uri() . '/fonts/genericons/genericons.css' );
+
 	wp_enqueue_script( 'dogboarding-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'dogboarding-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -129,7 +133,7 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-// WE ADDED THE ADD ACTION BELOW IN CLASS //
+// WE ADDED THE ADD ACTION BELOW IN CLASS FOR A CUSTOM POST //
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
     register_post_type( 'barkly_services',
@@ -137,6 +141,17 @@ function create_post_type() {
             'labels' => array(
                 'name' => __( 'Services' ),
                 'singular_name' => __( 'Service' )
+            ),
+            'taxonomies' => array('category'),
+            'public' => true,
+            'has_archive' => true,
+        )
+    );
+    register_post_type( 'barkly_rates',
+        array(
+            'labels' => array(
+                'name' => __( 'Rates' ),
+                'singular_name' => __( 'Rate' )
             ),
             'taxonomies' => array('category'),
             'public' => true,

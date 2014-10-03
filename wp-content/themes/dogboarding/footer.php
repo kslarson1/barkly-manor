@@ -11,11 +11,16 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'dogboarding' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'dogboarding' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'dogboarding' ), 'Dogboarding', '<a href="http://www.dripforward.com" rel="designer">Karl Larson</a>' ); ?>
-		</div><!-- .site-info -->
+		<!-- BEGIN FIRST ROW -->
+		<div class="row">
+			<img src="<?php bloginfo( 'template_directory' ); ?>/images/barklylogo.gif" ) alt=" " />
+		</div>
+
+		<!-- BEGIN SECOND ROW (FOR SMALL COPYRIGHT STUFF) -->
+		<div class="row">
+			<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'social' ) ); ?>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
