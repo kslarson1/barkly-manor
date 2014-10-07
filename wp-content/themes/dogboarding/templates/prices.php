@@ -14,31 +14,34 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 			
-			<!-- BEGIN REPEATER -->
-			<?php
+			<div class="row">
+				<!-- BEGIN REPEATER -->
+				<?php
 
-			// check if the repeater field has rows of data
-			if( have_rows('barkly-prices') ):
+				// check if the repeater field has rows of data
+				if( have_rows('barkly-prices') ):
 
-			 	// loop through the rows of data
-			    while ( have_rows('barkly-prices') ) : the_row();
+				 	// loop through the rows of data
+				    while ( have_rows('barkly-prices') ) : the_row();
 
-			        // display a sub field value
-			        the_sub_field('barkly-prices-daycare-1');
-			        the_sub_field('barkly-prices-daycare-2');
-			        the_sub_field('barkly-prices-boarding-1');
-			        the_sub_field('barkly-prices-boarding-1');
+				        // display a sub field value
+				       	the_sub_field('barkly-prices-daycare-1');
+				        the_sub_field('barkly-prices-daycare-2');
+				        the_sub_field('barkly-prices-boarding-1');
+				        the_sub_field('barkly-prices-boarding-1');
 
-			    endwhile;
+				    endwhile;
 
-			else :
+				else :
 
-			    // no rows found
+				    // no rows found
 
-			endif;
+				endif;
 
-			?>
-			<!-- END OF REPEATER -->
+				?>
+				<!-- END OF REPEATER -->
+			</div>
+			
 				<?php get_template_part( 'content', 'page' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
