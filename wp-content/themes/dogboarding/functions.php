@@ -148,16 +148,4 @@ function create_post_type() {
             'rewrite' => array('slug'=>'services'),
         )
     );
-    register_post_type( 'barkly_rates',
-        array(
-            'labels' => array(
-                'name' => __( 'Rates' ),
-                'singular_name' => __( 'Rate' )
-            ),
-            'taxonomies' => array('category'),
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug'=>'rates'),
-        )
-    );
 }

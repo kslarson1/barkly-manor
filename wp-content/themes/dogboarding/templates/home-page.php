@@ -30,6 +30,11 @@ get_header(); ?>
 				<h2><?php the_field('home-subheader'); ?></h2>
 			</div>
 			<!-- END SUB HEADLINE HERE -->
+			<!-- ADD BLOG AREA HERE in class stuff -->
+			
+
+
+			<!-- END OF BLOG AREA HERE in class stuff -->
 
 			<!-- INSERT COLUMN 1 IMAGE HERE -->
 			<div class="column one-third">
