@@ -31,13 +31,13 @@ get_header(); ?>
 			<!-- LOOP CONTENT BEGINS-->
 			<div class="row">
 			<!-- IMAGE HERE -->
-			<div class="column one-third circle">
+			<div class="column-one-third circle">
 				<img src="<?php the_field('services-column-image'); ?>" alt="">
 			</div>
 			<!-- END IMAGE -->
 
 			<!-- INSERT HEADER AND TEXT HERE -->
-			<div class="column two-thirds">
+			<div class="column-two-thirds">
 				<h2><?php the_field('services-column-header'); ?></h2>
 				<p><?php the_field('services-column-text'); ?></p>
 			</div>

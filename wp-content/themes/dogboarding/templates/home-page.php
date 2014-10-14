@@ -33,7 +33,7 @@ get_header(); ?>
 
 			<div class="row">
 			<!-- INSERT COLUMN 1 IMAGE HERE -->
-			<div class="column one-third">
+			<div class="column-one-third">
 				<div class="circle">
 					<img src="<?php the_field('home-column-1-image'); ?>" alt="">
 				</div>
@@ -44,7 +44,7 @@ get_header(); ?>
 			</div>
 
 			<!-- INSERT COLUMN 2 IMAGE HERE -->
-			<div class="column one-third">
+			<div class="column-one-third">
 				<div class="circle">
 					<img src="<?php the_field('home-column-2-image'); ?>" alt="">
 			<!-- END COLUMN 2 IMAGE -->
@@ -56,7 +56,7 @@ get_header(); ?>
 			</div>
 
 			<!-- INSERT COLUMN 3 IMAGE HERE -->
-			<div class="column one-third">
+			<div class="column-one-third">
 				<div class="circle">
 					<img src="<?php the_field('home-column-3-image'); ?>" alt="">
 			<!-- END COLUMN 3 IMAGE -->

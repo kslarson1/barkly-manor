@@ -1,0 +1,6 @@
+.circle {
+	height: 300px;
+	width: 300px;
+	border-radius: 150px;
+	background-image: url("<?php the_field('facility-bottom-image-1'); ?>");
+}

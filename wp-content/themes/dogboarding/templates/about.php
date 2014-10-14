@@ -19,12 +19,12 @@ get_header(); ?>
 			<!-- BEGIN ABOUT TOP SECTION -->
 			<div class="row">
 			<!-- BEGIN TEXT AREA -->
-			<div class="column one-half">
+			<div class="column-one-half">
 				<p><?php the_field('about-text'); ?></p>
 			</div>
 			<!-- END OF TEXT AREA -->
 			<!-- BEGIN ABOUT IMAGE -->
-			<div class="column one-half rectangle-rounded">
+			<div class="column-one-half rectangle-rounded">
 				<img src="<?php the_field('about-image'); ?>" alt="">
 			</div>
 			<!-- END OF ABOUT IMAGE -->
