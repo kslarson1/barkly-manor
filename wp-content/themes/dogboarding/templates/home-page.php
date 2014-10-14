@@ -30,48 +30,42 @@ get_header(); ?>
 				<h2><?php the_field('home-subheader'); ?></h2>
 			</div>
 			<!-- END SUB HEADLINE HERE -->
-			<!-- ADD BLOG AREA HERE in class stuff -->
-			
 
-
-			<!-- END OF BLOG AREA HERE in class stuff -->
-
+			<div class="row">
 			<!-- INSERT COLUMN 1 IMAGE HERE -->
 			<div class="column one-third">
 				<div class="circle">
-					<img src="<?php the_field('home-column-1-image'); ?>" alt="puppy">
+					<img src="<?php the_field('home-column-1-image'); ?>" alt="">
 				</div>
 			<!-- END COLUMN 1 IMAGE -->
-
 			<!-- INSERT COLUMN 1 TEXT HERE -->
 				<p><?php the_field('home-column-1-text'); ?></p>
-			</div>
 			<!-- END COLUMN 1 TEXT -->
+			</div>
 
 			<!-- INSERT COLUMN 2 IMAGE HERE -->
 			<div class="column one-third">
 				<div class="circle">
 					<img src="<?php the_field('home-column-2-image'); ?>" alt="">
-				</div>
 			<!-- END COLUMN 2 IMAGE -->
 
 			<!-- INSERT COLUMN 2 TEXT HERE -->
 				<p><?php the_field('home-column-2-text'); ?></p>
 			</div>
 			<!-- END COLUMN 2 TEXT -->
+			</div>
 
 			<!-- INSERT COLUMN 3 IMAGE HERE -->
 			<div class="column one-third">
 				<div class="circle">
 					<img src="<?php the_field('home-column-3-image'); ?>" alt="">
-				</div>
 			<!-- END COLUMN 3 IMAGE -->
-
+			</div>
 			<!-- INSERT COLUMN 3 TEXT HERE -->
 				<p><?php the_field('home-column-3-text'); ?></p>
 			</div>
-			<!-- END COLUMN 3 TEXT -->
-
+			<!-- END OF COLUMN 3 TEXT -->
+			</div>
 				<?php get_template_part( 'content', 'page' ); ?>
 
 			<?php endwhile; // end of the loop. ?>

@@ -24,6 +24,7 @@ and Blueprint http://www.blueprintcss.org/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 Reset
+1.5 Grid (added by me)
 2.0 Typography
 3.0 Elements
 4.0 Forms
@@ -126,6 +127,49 @@ a:active {
 
 a img {
   border: 0; }
+
+/*--------------------------------------------------------------
+1.5 Grid (Added by me)
+--------------------------------------------------------------*/
+.row {
+  width: 85%;
+  max-width: 1140px;
+  margin: 0 auto 1em;
+  content: "";
+  display: table; }
+
+[class*="column-"] {
+  float: left;
+  box-sizing: border-box;
+  padding: 0 2%;
+  margin: 0 2% 0 0; }
+  [class*="column-"]:last-of-type {
+    margin-right: 0; }
+
+.column-12 {
+  width: 6.5%; }
+.column-11 {
+  width: 7.27273%; }
+.column-10 {
+  width: 8.2%; }
+.column-9 {
+  width: 9.33333%; }
+.column-8 {
+  width: 10.75%; }
+.column-7 {
+  width: 12.57143%; }
+.column-6, .column-sixth, .column-sixths, .column-one-sixth, .column-one-sixths, .column-two-third, .column-two-thirds {
+  width: 15%; }
+.column-5 {
+  width: 18.4%; }
+.column-4, .column-quarter, .column-quarters, .column-fourth, .column-fourths, .column-one-quarter, .column-one-quarters {
+  width: 23.5%; }
+.column-3, .column-third, .column-thirds, .column-one-third, .column-one-thirds {
+  width: 32%; }
+.column-2, .column-half, .column-halfs, .column-halve, .column-halves, .column-one-half, .column-one-halves {
+  width: 49%; }
+.column-1, .column-full, .column-whole {
+  width: 100%; }
 
 /*--------------------------------------------------------------
 2.0 Typography

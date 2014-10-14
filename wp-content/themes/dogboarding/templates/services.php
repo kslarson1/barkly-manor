@@ -16,7 +16,7 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-			<div class="row">
+			
 
 			<!-- // The Arguments -->
 			<?php $args = array( 
@@ -29,6 +29,7 @@ get_header(); ?>
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 			<!-- LOOP CONTENT BEGINS-->
+			<div class="row">
 			<!-- IMAGE HERE -->
 			<div class="column one-third circle">
 				<img src="<?php the_field('services-column-image'); ?>" alt="">
@@ -40,9 +41,10 @@ get_header(); ?>
 				<h2><?php the_field('services-column-header'); ?></h2>
 				<p><?php the_field('services-column-text'); ?></p>
 			</div>
+		</div>
 			<!-- END HEADER AND TEXT -->
 			<?php endwhile; ?>
-			</div>
+	
 
 				<?php get_template_part( 'content', 'page' ); ?>
 
