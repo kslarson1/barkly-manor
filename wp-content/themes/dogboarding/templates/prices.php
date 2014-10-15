@@ -25,10 +25,12 @@ get_header(); ?>
 				    while ( have_rows('barkly-prices') ) : the_row();
 
 				        // display a sub field value
-				       	the_sub_field('barkly-prices-daycare-1');
+				  
+				      	the_sub_field('barkly-prices-daycare-1');
 				        the_sub_field('barkly-prices-daycare-2');
 				        the_sub_field('barkly-prices-boarding-1');
 				        the_sub_field('barkly-prices-boarding-1');
+				      
 
 				    endwhile;
 

@@ -15,28 +15,25 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<!-- BEGIN FULL IMAGE HERO BACKGROUND -->
-			<div class="full-width" style="background-image: url(<?php the_field('home-hero-image'); ?>">
-			</div>
-			<!-- END HERO BACKGROUND -->
+			<div class="full-width center" style="background-image: url(<?php the_field('home-hero-image'); ?>);">
 
-			<!-- BEGIN HEADLINE HERE -->
-			<div class="row">
-				<h1><?php get_field('home-heading'); ?></h1>
-			</div>
-			<!-- END HEADLINE HERE -->
+				<!-- BEGIN HEADLINE HERE -->
+				<div class="row">
+					<h1><?php the_field('home-heading'); ?></h1>
+				</div>
+				<!-- END HEADLINE HERE -->
 
-			<!-- INSERT SUB HEADLINE TEXT HERE -->
-			<div class="row">
-				<h2><?php the_field('home-subheader'); ?></h2>
-			</div>
+				<!-- INSERT SUB HEADLINE TEXT HERE -->
+				<div class="row">
+					<h2><?php the_field('home-subheader'); ?></h2>
+				</div>
 			<!-- END SUB HEADLINE HERE -->
-
+			</div>
+			<!-- END OF HERO BACKGROUND -->
 			<div class="row">
 			<!-- INSERT COLUMN 1 IMAGE HERE -->
 			<div class="column-one-third">
-				<div class="circle">
-					<img src="<?php the_field('home-column-1-image'); ?>" alt="">
-				</div>
+					<div class="circle" style="background-image: url(<?php the_field('home-column-1-image'); ?>);" ></div>
 			<!-- END COLUMN 1 IMAGE -->
 			<!-- INSERT COLUMN 1 TEXT HERE -->
 				<p><?php the_field('home-column-1-text'); ?></p>
@@ -45,22 +42,17 @@ get_header(); ?>
 
 			<!-- INSERT COLUMN 2 IMAGE HERE -->
 			<div class="column-one-third">
-				<div class="circle">
 					<img src="<?php the_field('home-column-2-image'); ?>" alt="">
 			<!-- END COLUMN 2 IMAGE -->
-
 			<!-- INSERT COLUMN 2 TEXT HERE -->
 				<p><?php the_field('home-column-2-text'); ?></p>
-			</div>
 			<!-- END COLUMN 2 TEXT -->
 			</div>
-
+			
 			<!-- INSERT COLUMN 3 IMAGE HERE -->
 			<div class="column-one-third">
-				<div class="circle">
 					<img src="<?php the_field('home-column-3-image'); ?>" alt="">
 			<!-- END COLUMN 3 IMAGE -->
-			</div>
 			<!-- INSERT COLUMN 3 TEXT HERE -->
 				<p><?php the_field('home-column-3-text'); ?></p>
 			</div>

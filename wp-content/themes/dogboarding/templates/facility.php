@@ -17,15 +17,17 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<!-- START TOP HALF MAP AND INFO -->
-			<div class="row">
-				<div class="column-one-half">
-					<p><?php the_field('facility-top-text'); ?></p>
-				</div>
-				<!-- *********NEED TO INSERT BUTTONS HERE -->
-				<div class="column-one-half">
-					<!--  THE GOOGLE MAP GOES HERE -->
-					<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:400px;width:500px;border-radius:10px;"><div id="gmap_canvas" style="height:400px;width:500px;border-radius:10px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://www.map-embed.com/sheego-gutschein/" id="get-map-data"></a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(39.7400802,-104.9291589),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(39.7400802, -104.9291589)});infowindow = new google.maps.InfoWindow({content:"<b>Barkly Manor</b><br/>5010 East Colfax Avenue<br/>Denver, CO 80220" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-					<!-- END OF GOOGLE MAPS -->
+			<div id="facility-top">
+				<div class="row">
+					<div class="column-one-half">
+						<p><?php the_field('facility-top-text'); ?></p>
+					</div>
+					<!-- *********NEED TO INSERT BUTTONS HERE -->
+					<div class="column-one-half">
+						<!--  THE GOOGLE MAP GOES HERE -->
+						<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:400px;width:500px;border-radius:10px;"><div id="gmap_canvas" style="height:400px;width:500px;border-radius:10px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://www.map-embed.com/sheego-gutschein/" id="get-map-data"></a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(39.7400802,-104.9291589),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(39.7400802, -104.9291589)});infowindow = new google.maps.InfoWindow({content:"<b>Barkly Manor</b><br/>5010 East Colfax Avenue<br/>Denver, CO 80220" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+						<!-- END OF GOOGLE MAPS -->
+					</div>
 				</div>
 			</div>
 			<!-- END TOP HALF MAP AND INFO -->
@@ -34,28 +36,28 @@ get_header(); ?>
 			<div class="row">
 				<!-- START FIRST COLUMN -->
 				<div class="column-one-third">
-					<div class="circle">
 						<img src="<?php the_field('facility-bottom-image-1'); ?>" alt="">
+					<div class="center">
+						<h1><?php the_field('facility-bottom-header-1'); ?></h1>
 					</div>
-					<h1><?php the_field('facility-bottom-header-1'); ?></h1>
 					<p><?php the_field('facility-bottom-text-1'); ?></p>
 				</div>
 				<!-- END FIRST COLUMN -->
 				<!-- START SECOND COLUMN -->
 				<div class="column-one-third">
-					<div class="circle">
 						<img src="<?php the_field('facility-bottom-image-2'); ?>" alt="">
+					<div class="center">
+						<?php the_field('facility-bottom-header-2'); ?>
 					</div>
-					<div class="kheader"><?php the_field('facility-bottom-header-2'); ?></div>
 					<p><?php the_field('facility-bottom-text-2'); ?></p>
 				</div>
 				<!-- END SECOND COLUMN -->
 				<!-- START THIRD COLUMNN -->
 				<div class="column-one-third">
-					<div class="circle">
 						<img src="<?php the_field('facility-bottom-image-3'); ?>" alt="">
+					<div class="center">
+						<?php the_field('facility-bottom-header-3'); ?>
 					</div>
-					<h2><?php the_field('facility-bottom-header-3'); ?></h2>
 					<p><?php the_field('facility-bottom-text-3'); ?></p>
 				</div>
 				<!-- END THIRD COLUMN -->
