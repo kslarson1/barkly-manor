@@ -13,11 +13,10 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<!-- BEGIN FIRST ROW -->
 		<div class="row">
-			<img src="<?php bloginfo( 'template_directory' ); ?>/images/barklylogo.gif" ) alt=" " />
-		</div>
+			<img src="<?php bloginfo( 'template_directory' ); ?>/images/barklylogo.gif" ) />
 
-		<!-- BEGIN SECOND ROW (FOR SMALL COPYRIGHT STUFF) -->
-		<div class="row">
+		<!-- BEGIN SECOND ROW (FOR SOCIAL AND SMALL COPYRIGHT STUFF) -->
+
 			<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
 			<?php wp_nav_menu( array( 'theme_location' => 'social' ) ); ?>
 		</div>

@@ -25,9 +25,7 @@ get_header(); ?>
 			<!-- END OF TEXT AREA -->
 			<!-- BEGIN ABOUT IMAGE -->
 			<div class="column-one-half rectangle-rounded">
-				<div class="krounded">
-					<img src="<?php the_field('about-image'); ?>" alt="">
-				</div>
+					<img src="<?php the_field('about-image'); ?>" style="border-radius:5%;" alt="">
 			</div>
 			<!-- END OF ABOUT IMAGE -->
 			</div>

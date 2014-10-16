@@ -36,7 +36,7 @@ get_header(); ?>
 			<div class="row">
 				<!-- START FIRST COLUMN -->
 				<div class="column-one-third">
-						<img src="<?php the_field('facility-bottom-image-1'); ?>" alt="">
+						<div class="circle glow" style="background-image: url(<?php the_field('facility-bottom-image-1'); ?>)"></div>
 					<div class="center">
 						<h1><?php the_field('facility-bottom-header-1'); ?></h1>
 					</div>
@@ -45,7 +45,7 @@ get_header(); ?>
 				<!-- END FIRST COLUMN -->
 				<!-- START SECOND COLUMN -->
 				<div class="column-one-third">
-						<img src="<?php the_field('facility-bottom-image-2'); ?>" alt="">
+						<div class="circle glow" style="background-image: url(<?php the_field('facility-bottom-image-2'); ?>)"></div>
 					<div class="center">
 						<?php the_field('facility-bottom-header-2'); ?>
 					</div>
@@ -54,7 +54,7 @@ get_header(); ?>
 				<!-- END SECOND COLUMN -->
 				<!-- START THIRD COLUMNN -->
 				<div class="column-one-third">
-						<img src="<?php the_field('facility-bottom-image-3'); ?>" alt="">
+						<div class="circle glow" style="background-image: url(<?php the_field('facility-bottom-image-3'); ?>)"></div>
 					<div class="center">
 						<?php the_field('facility-bottom-header-3'); ?>
 					</div>

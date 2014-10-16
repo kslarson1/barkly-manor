@@ -31,7 +31,7 @@ get_header(); ?>
 			<div class="row">
 			<!-- IMAGE HERE -->
 				<div class="column-one-third">
-					<img src="<?php the_field('services-column-image'); ?>" alt="">
+					<div class="circle glow" style="background-image: url(<?php the_field('services-column-image'); ?>);"></div>
 				</div>
 				<!-- END IMAGE -->
 

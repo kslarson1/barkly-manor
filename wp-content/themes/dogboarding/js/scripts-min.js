@@ -1,0 +1,1 @@
+function resizeDiv(){vpw=$(window).width(),vph=$(window).height(),cirW=$(".circle").width(),$(".circle").css({height:cirW+"px"})}$(document).ready(function(){resizeDiv()}),window.onresize=function(i){resizeDiv()};

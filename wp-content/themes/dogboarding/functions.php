@@ -93,10 +93,23 @@ add_action( 'widgets_init', 'dogboarding_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
+		// THE LINES BELOW ADDED
+if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+function my_jquery_enqueue() {
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", false, null);
+     wp_enqueue_script('jquery');
+}
+	// END OF STUFF ADDED
+
 function dogboarding_scripts() {
 	wp_enqueue_style( 'dogboarding-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'dogboarding-genericons', get_template_directory_uri() . '/fonts/genericons/genericons.css' );
+
+		// ADDED THE SCRIPT BELOW
+	wp_enqueue_script( '_s-scripts', get_template_directory_uri() . '/js/scripts-min.js', array('jquery') );
 
 	wp_enqueue_script( 'dogboarding-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
