@@ -173,6 +173,9 @@ a img {
 @media (max-width: 768px) {
   .column-third, .column-thirds, .column-one-third, .column-one-thirds {
     width: 100%; } }
+@media (max-width: 768px) {
+  .column-two-third, .column-two-thirds {
+    width: 100%; } }
 
 /*--------------------------------------------------------------
 1.7 My Style (Added by me)
@@ -181,8 +184,11 @@ a img {
   text-align: center; }
 
 .full-width {
-  min-height: 500px;
-  line-height: 100px; }
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+  min-height: 500px; }
 
 .circle {
   width: 100%;

@@ -39,7 +39,10 @@
       @extend .column-#{$grid_base / ($grid_base / 3)}; 
       @include media($tablet) {width: 100%; }
     }
-    &-two-third, &-two-thirds {  @extend .column-#{($grid_base / ($grid_base / 3) * 2)}; }
+    &-two-third, &-two-thirds {
+      @extend .column-#{($grid_base / ($grid_base / 3) * 2)};
+      @include media($tablet) {width: 100%; }
+       }
   }
   @if $grid_base == 2 or $grid_base == 4 or $grid_base == 6 or $grid_base == 8 or $grid_base == 10 or $grid_base == 12 or $grid_base == 14 or $grid_base == 16 or $grid_base == 18 {
     &-half, &-halfs, &-halve, &-halves, &-one-half, &-one-halves { @extend .column-#{$grid_base / ($grid_base / 2)}; }
