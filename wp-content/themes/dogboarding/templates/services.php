@@ -27,6 +27,7 @@ get_header(); ?>
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
+			<div class="fixtop">
 			<!-- LOOP CONTENT BEGINS-->
 			<div class="row">
 			<!-- IMAGE HERE -->
@@ -38,12 +39,13 @@ get_header(); ?>
 				<!-- INSERT HEADER AND TEXT HERE -->
 				<div class="column-two-thirds">
 					<div class="center">
-						<?php the_field('services-column-header'); ?>
+						<h1><?php the_field('services-column-header'); ?></h1>
 					</div>
 					<p><?php the_field('services-column-text'); ?></p>
 				</div>
 			</div>
 			<!-- END HEADER AND TEXT -->
+			</div>
 			<?php endwhile; ?>
 	
 

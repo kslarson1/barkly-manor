@@ -24,11 +24,13 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="row">
-			<div class="site-branding">
 				<a class ="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img src="<?php bloginfo( 'template_directory' ); ?>/images/barklylogo.gif" ) alt=" " />
+					<?php if ( get_header_image() ) : ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<img src="<?php header_image(); ?>" style="height: 40px; float: left;">
+						</a>
+						<?php endif; // End header image check. ?>
 				</a>
-			</div>
 		
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Primary Menu', 'dogboarding' ); ?></button>

@@ -15,7 +15,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<!-- BEGIN FULL IMAGE HERO BACKGROUND -->
-			<div class="full-width center" style="background-image: url(<?php the_field('home-hero-image'); ?>);">
+			<div class="full-width center fixtop" style="background-image: url(<?php the_field('home-hero-image'); ?>);">
 
 				<!-- BEGIN HEADLINE HERE -->
 				<div class="row">

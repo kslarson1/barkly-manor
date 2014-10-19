@@ -17,7 +17,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<!-- BEGIN ABOUT TOP SECTION -->
-			<div class="row">
+			<div class="row fixtop">
 			<!-- BEGIN TEXT AREA -->
 			<div class="column-one-half">
 				<p><?php the_field('about-text'); ?></p>
